@@ -1,0 +1,9 @@
+
+*Parar y arrancar server de mongodb
+
+cd /usr
+cd bin
+service mongodb stop
+service mongodb start
+
+
