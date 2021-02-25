@@ -1,0 +1,325 @@
+/*Importar fuentes custom*/
+@font-face{
+  font-family: "yanonne";
+  src: url("fonts/yanone.ttf")
+}
+
+@font-face{
+  font-family: "finger";
+  src: url("fonts/finger.ttf")
+}
+
+@font-face{
+  font-family: "titilium";
+  src: url("fonts/titilium.ttf")
+}
+
+/*generales*/
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+body{
+  font-family: "yanonne", Arial, Helvetica;
+  font-size: 20px;
+  background: url("../img/pattern.png");
+  background-attachment: fixed;
+}
+
+.clearfix{
+  float: none;
+  clear: both;
+}
+
+/*Header*/
+
+header{
+  display: block;
+  width: 100%;
+  height: 90px;
+  background-color: rgba(53,103,164,0.8);
+  position:fixed;
+  text-transform: uppercase;
+}
+
+header ul{
+  display: block;
+  width: 40%;
+  height: inherit;
+  margin: 0px auto;
+  margin-top: -4px;
+}
+
+header ul li{
+  display: inline-block;
+  margin: 0px auto;
+  text-align: center;
+  line-height: 88px;
+}
+
+header ul li a{
+  display: block;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: inherit;
+  text-decoration: none;
+  color: white;
+  transition: all 300ms;
+}
+
+header a:hover ,.actived{
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/*logo*/
+
+#logo{
+  font-family: "finger";
+  font-size: 1.5em;
+}
+
+#logo a{
+  transition: color 500ms, transform 500ms;
+}
+
+header #logo a:hover{
+  background: transparent;
+  color: black;
+  transform: scale(1.50, 1.50);
+}
+
+/*contenedor principal*/
+
+#content{
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0px 0px 40px black;
+  background: rgba(255, 255, 255, 0.7);
+  min-height: 600px;
+  height: auto;
+  overflow: auto;
+  padding-top: 120px;
+  border-left: 1px solid #b7b7b7;
+  border-right: 1px solid #b7b7b7;
+}
+
+/*footer*/
+
+footer{
+  width: 80%;
+  margin: 0px auto;
+  padding-top: 15px;
+  color: rgba(0, 0, 0, 0.5)
+  
+}
+
+/*About me*/
+
+#title{
+  width: 70%;
+  margin: 0px auto;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+#title h1{
+  font-family: 'finger';
+  font-size: 2.5em;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+}
+
+#title h2 {
+  font-size: 1.8em;
+  color: gray;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.about{
+  width: 79%;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+
+.about h2{
+  border-bottom: 1px solid #ccc;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 1.3em;
+}
+
+.about p {
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: justify;
+}
+
+/*create project*/
+
+.container{
+  padding: 50px;
+  padding-top: 10px;
+}
+
+.container .image{
+  float: left;
+  width: 49%;
+}
+
+.container .image img{
+  width: 100%;
+}
+
+.container .data{
+  float:left;
+  width: 48%;
+  margin-left: 30px;
+  margin-top: 6%;
+}
+
+.container h2{
+  display: block;
+  border-bottom:1px solid #ccc ;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+form{
+  width: 80%;
+}
+
+form label{
+  display: block;
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea {
+  width: 50%;
+  padding: 5px;
+}
+
+form button,
+form input[type="submit"],
+.button-edit,
+.button-delete{
+  display: block;
+  font-size: 1em;
+  padding: 10px;
+  margin-top:15px;
+  color: white;
+  background-color: rgba(53,103,164,1); 
+  border: 1px solid rgba(13, 67, 133, 1);
+  cursor: pointer;
+}
+
+.button-edit,
+.button-delete{
+  width: 20%;
+  float: left;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.button-edit{
+  background-color:grey;
+  border: none;
+}
+
+.button-delete{
+  background-color: blueviolet;
+  border: none;
+}
+
+
+form button:hover,
+form input[type="submit"]:hover{
+  background-color: rgba(53,103,164,0.8); 
+  border: 1px solid rgba(13, 67, 133, 0.8);
+}
+
+form input[disabled]{
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.form_error {
+  color: red;
+  margin-left: 10px;
+}
+
+.message {
+  width: 50%;
+  padding: 5px;
+  border: 1px solid #eee;
+}
+
+.success, .message a{
+  color: green;
+}
+
+.failed{
+  color: red;
+}
+
+/*Pagina de proyectos*/
+
+.project{
+  list-style: none;
+  display: block;
+  float: left;
+  width: 28%;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+}
+
+.project .image {
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+.project img {
+  width: 100%;
+}
+
+.project a {
+  text-decoration: none;
+  color: black;
+}
+ /*botones de edicion y borrado*/
+
+.data-confirm{
+  float:left;
+  width: 48%;
+  margin-left: 30px;
+}
+
+.confirm{
+  display: block;
+  font-weight: bold;
+}
+
+/*galeria*/
+
+.galeria-margin{
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
